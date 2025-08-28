@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capsule Temporelle Numérique</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Capsule Temporelle Numérique</h1>
+    <p>Capturez des moments aujourd'hui, redécouvrez-les demain.</p>
+    <button id="start-btn" class="primary">Créer ma capsule</button>
+  </header>
+
+  <main>
+    <section class="features">
+      <div class="feature">
+        <h2>Simple</h2>
+        <p>Un processus guidé étape par étape.</p>
+      </div>
+      <div class="feature">
+        <h2>Sécurisé</h2>
+        <p>Vos souvenirs sont protégés.</p>
+      </div>
+      <div class="feature">
+        <h2>À partager</h2>
+        <p>Envoyez vos capsules à vos proches.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="wizard" aria-hidden="true">
+    <div class="wizard-content" role="dialog" aria-modal="true">
+      <button id="close-wizard" aria-label="Fermer">&times;</button>
+      <form id="wizard-form">
+        <div class="step active" data-step="1">
+          <label for="message">Votre message</label>
+          <textarea id="message" required></textarea>
+          <button type="button" class="next primary">Suivant</button>
+        </div>
+        <div class="step" data-step="2">
+          <label for="date">Date d'ouverture</label>
+          <input type="date" id="date" required />
+          <div class="nav">
+            <button type="button" class="prev">Retour</button>
+            <button type="button" class="next primary">Suivant</button>
+          </div>
+        </div>
+        <div class="step" data-step="3">
+          <label for="email">Email de destination</label>
+          <input type="email" id="email" required />
+          <div class="nav">
+            <button type="button" class="prev">Retour</button>
+            <button type="submit" class="primary">Créer</button>
+          </div>
+        </div>
+      </form>
+      <div id="confirmation" class="hidden">
+        <p>Votre capsule est prête !</p>
+        <button type="button" id="close-confirmation" class="primary">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
